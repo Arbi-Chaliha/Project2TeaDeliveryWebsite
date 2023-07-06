@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            overflow: hidden;
+        }
+        
+        .slideshow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -10;
+            display:flex;
+           
+        }
+        
+        .slideshow img {
+            display: none;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(1.2) saturate(1.2); /* Increase brightness and saturation */
+        }
+        
+        .slideshow img.active {
+            display: block;
+        }
+        .text
+        {
+            
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 28px;
+            font-weight: bolder;
+            color:white;
+        }
+        .headers
+        {
+            margin:4px 7px;
+            
+        }
+        .btn
+        {
+           
+            font-size:16px;
+            margin:6px 6px;
+            padding:7px;
+            float:right;
+            border-radius:8px;
+            border:none;
+           
+        }
+        .btn:hover{
+            cursor: pointer;
+            background-color: rgba(149, 241, 88, 0.893);
+            
+           
+        }
+        
+    </style>
+      
+      
+</head>
+<body>
+   
+        <header class="headers">
+            <button onclick="window.location.href = 'about.html';" class="btn">Login</button>
+            <!--<button onclick="window.location.href = 'login.html';" class="btn">Login</button>-->
+        </header>
+    
+   <!--<header class="headers">
+    <button class="btn">About</button>
+    <button class="btn">Login</button>-->
+
+   </header>
+    <div class="text">
+        <h1>Taste the tea of Assam</h1>
+        <br>
+            Enjoy the refreshing tea of Assam. Scenic beauty, monsoon climate along with a hot cup of tea.<br>
+            Isn't it amazing? Check out our various collection of Assam's tea. Quanlity and quantity guaranteed
+    </div>
+    <div class="slideshow">
+        
+        <img src="../images/tea5.jpeg" class="active">
+        <img src="../images/assam.jpg">
+        <img src="../images/y.jpg">
+        <img src="../images/tea9.jpeg">
+    </div>
+
+    <script>
+        var images = document.querySelectorAll('.slideshow img');
+        var currentIndex = 0;
+
+        function toggleImages() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+
+        setInterval(toggleImages, 3000); // Change image every 5 seconds (adjust as needed)
+    </script>
+</body>
+</html>
+
+
+
+
+
+
