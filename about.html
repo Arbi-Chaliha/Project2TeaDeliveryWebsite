@@ -8,9 +8,9 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <title>Document</title>
     <style>
-        * {
+       /* * {
             background-color: black;
-        }
+        }*/
 
         .point {
             cursor: pointer;
@@ -24,21 +24,21 @@
         }
 
         .class1 {
-            color: white;
+            color:black;
             font-size: 26px;
             font-weight: bold;
             height: 80px;
         }
 
         .class2 {
-            color: white;
+            color: black;
             font-size: 26px;
             font-weight: bold;
             height: 80px;
         }
 
         .class3 {
-            color: white;
+            color:black;
             font-size: 26px;
             font-weight: bold;
             height: 80px;
@@ -130,40 +130,77 @@
 </head>
 
 <body>
-    <header class="design text-black  body-font">
-        <div class=" container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-            <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf7bPwvGiuMFdKVDbZtPXvHrwcolucCJnE1A&usqp=CAU"
-                    fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    class="w-12 h-12 text-white p-2 bg-green rounded-full" viewBox="0 0 24 24">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+   
+    
+    <nav class="bg-green-900">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
+                <!--
+                  Icon when menu is closed.
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
-                <span class="ml-3 text-xl">Assam4T</span>
-            </a>
+                <!--
+                  Icon when menu is open.
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div class="flex flex-shrink-0 items-center">
+                <img class="h-8 w-auto" src="https://cdn.pixabay.com/photo/2021/01/15/17/01/green-5919790_1280.jpg" alt="Your Company">
+              </div>
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <a href="/index.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Home</a>
+                  <a href="/contactUs.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact Us</a>
+                  <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
 
-            <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-white justify-center">
-
-                <a href="/FirstPage.html" class="mr-5 hover:text-gray-500">Home</a>
-                <a href="/about.html" class="mr-5 hover:text-gray-500">About</a>
-
-                <a href="/contact.html" class="mr-5 hover:text-gray-500">Contact</a>
-
-            </nav>
-
+                </div>
+              </div>
+            </div>
+            
+              </div>
+            </div>
+          </div>
         </div>
-    </header>
+      
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="space-y-1 px-2 pb-3 pt-2">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Home</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact Us</a>
+           
+          </div>
+        </div>
+      </nav>
 
 
 
 
-    <section class="text-white body-font">
+    <section class="text-dark body-font">
         <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
             <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 " style="margin-right:28px;">
                 <img class="pic object-cover object-center rounded" alt="hero" src="../images/Tea.jpg">
             </div>
             <div
                 class="count lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-                <h1 class="title-font sm:text-2xl text-3xl mb-4 font-medium text-white">We at Assam4T provide tea
+                <h1 class="title-font sm:text-2xl text-3xl mb-4 font-medium text-dark">We at Assam4T provide tea
                     delivery service to the other states of India to enjoy the healthy, refreshing and finest tea of
                     Assam
                     <br class="hidden lg:inline-block">
@@ -193,9 +230,9 @@
 
 
 
-    <section class="text-white body-font">
+    <section class="text-dark body-font">
 
-        <div class="container px-5 py-24 mx-auto">
+        <div class="container px-5 py-5 mx-auto">
             <h1 class="class1">Herbal Tea</h1>
             <div class="flex flex-wrap -m-4">
                 <div class="lg:w-1/4 md:w-1/2 p-4 w-full point" onclick="redirectToPage1()">
@@ -204,9 +241,9 @@
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpxE2NH1tNPf49xrlq-ptCeRFvzECHSM1eyg&usqp=CAU">
                     </a>
                     <div class="mt-4">
-                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 class="text-white title-font text-lg font-medium">Hibiscus Tea</h2>
-                        <p class="text-white mt-1">Rs 200 per packet</p>
+                        <h3 class="text-dark text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                        <h2 class="text-dark title-font text-lg font-medium">Hibiscus Tea</h2>
+                        <p class="text-dark mt-1">Rs 200 per packet</p>
                     </div>
                 </div>
 
@@ -217,9 +254,9 @@
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3w5Vy57FfC-9J7sZmYtMEE71-lpi1oHhzEw&usqp=CAU1">
                     </a>
                     <div class="mt-4">
-                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 class="text-white title-font text-lg font-medium">Peppermint Tea</h2>
-                        <p class="text-white mt-1">Rs 350.00 per packet</p>
+                        <h3 class="text-dark text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                        <h2 class="text-dark title-font text-lg font-medium">Peppermint Tea</h2>
+                        <p class="text-dark mt-1">Rs 350.00 per packet</p>
                     </div>
                 </div>
 
@@ -229,9 +266,9 @@
                             src="data:image/jpeg;base64,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">
                     </a>
                     <div class="mt-4">
-                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 class="text-white title-font text-lg font-medium">Lemon Balm Tea</h2>
-                        <p class="text-white mt-1">Rs 270.00 per packet</p>
+                        <h3 class="text-dark text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                        <h2 class="text-dark title-font text-lg font-medium">Lemon Balm Tea</h2>
+                        <p class="text-dark mt-1">Rs 270.00 per packet</p>
                     </div>
                 </div>
 
@@ -241,9 +278,9 @@
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcpROHemOl5ry917gXQuO4xTBm_Jwmcp3wOg&usqp=CAU">
                     </a>
                     <div class="mt-4">
-                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 class="text-white title-font text-lg font-medium">Chamomile Tea</h2>
-                        <p class="text-white mt-1">Rs 180 per packet</p>
+                        <h3 class="text-dark text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                        <h2 class="text-dark title-font text-lg font-medium">Chamomile Tea</h2>
+                        <p class="text-dark mt-1">Rs 180 per packet</p>
                     </div>
                 </div>
             </div>
@@ -252,8 +289,8 @@
 
 
 
-    <section class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto">
+    <section class="text-dark body-font">
+        <div class="container px-5 py-5 mx-auto">
             <h1 class="class2">Premium Tea</h1>
             <div class="flex flex-wrap -m-4">
 
@@ -263,9 +300,9 @@
                             src="data:image/jpeg;base64,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">
                     </a>
                     <div class="mt-4">
-                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 class="text-white title-font text-lg font-medium">Mixed Masala Tea</h2>
-                        <p class="text-white mt-1">Rs 400 per packet</p>
+                        <h3 class="text-dark text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                        <h2 class="text-darktitle-font text-lg font-medium">Mixed Masala Tea</h2>
+                        <p class="text-dark mt-1">Rs 400 per packet</p>
                     </div>
                 </div>
                 <div class="lg:w-1/4 md:w-1/2 p-4 w-full point" onclick="redirectToPage2()">
@@ -274,9 +311,9 @@
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtnbOZ5f33xKUqCZdc62VzVZOPxpe-nQDbGA&usqp=CAU">
                     </a>
                     <div class="mt-4">
-                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 class="text-white title-font text-lg font-medium">Mango Tea</h2>
-                        <p class="text-white mt-1">Rs 350 per packet</p>
+                        <h3 class="text-dark text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                        <h2 class="text-dark title-font text-lg font-medium">Mango Tea</h2>
+                        <p class="text-dark mt-1">Rs 350 per packet</p>
                     </div>
                 </div>
                 <div class="lg:w-1/4 md:w-1/2 p-4 w-full point" onclick="redirectToPage2()">
@@ -285,20 +322,20 @@
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmBPdL09QaiBaPrmvtA_FluROVZdUzw7row&usqp=CAU">
                     </a>
                     <div class="mt-4">
-                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 class="text-white title-font text-lg font-medium">Fresh Honey Tea</h2>
-                        <p class="text-white mt-1">Rs 200 per packet</p>
+                        <h3 class="text-dark text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                        <h2 class="text-dark title-font text-lg font-medium">Fresh Honey Tea</h2>
+                        <p class="text-dark mt-1">Rs 200 per packet</p>
                     </div>
                 </div>
                 <div class="lg:w-1/4 md:w-1/2 p-4 w-full point" onclick="redirectToPage2()">
                     <a class="block relative h-48 rounded overflow-hidden">
                         <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkCZ2HKTqyHoQcPmMMM6ueYgse6BEqpq65rQ&usqp=CAU">
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbrmNaA0OA-XJNXFfEJEKE3E3uG2BgwWTUB09yz1vXXxUzpqVuKpu5a1NoEfX2gCtZJxE&usqp=CAU">
                     </a>
                     <div class="mt-4">
-                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 class="text-white title-font text-lg font-medium">Dark chocolate Tea</h2>
-                        <p class="text-white mt-1">Rs 450 per packet</p>
+                        <h3 class="text-dark text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                        <h2 class="text-dark title-font text-lg font-medium">Dark chocolate Tea</h2>
+                        <p class="text-dark mt-1">Rs 450 per packet</p>
                     </div>
                 </div>
             </div>
@@ -306,7 +343,7 @@
     </section>
 
 
-    <section class="text-gray-600 body-font">
+    <section class="text-dark body-font">
         <div class="container px-5 py-24 mx-auto">
             <h1 class="class3">Regional Special Organic Tea</h1>
             <div class="flex flex-wrap -m-4">
@@ -317,9 +354,9 @@
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbrmNaA0OA-XJNXFfEJEKE3E3uG2BgwWTUB09yz1vXXxUzpqVuKpu5a1NoEfX2gCtZJxE&usqp=CAU">
                     </a>
                     <div class="mt-4">
-                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 class="text-white title-font text-lg font-medium">Special Ginger-Tulsi Tea</h2>
-                        <p class="text-white mt-1">Rs 100 per packet</p>
+                        <h3 class="text-dark text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                        <h2 class="text-dark title-font text-lg font-medium">Special Ginger-Tulsi Tea</h2>
+                        <p class="text-dark mt-1">Rs 100 per packet</p>
                     </div>
                 </div>
                 <div class="lg:w-1/4 md:w-1/2 p-4 w-full point" onclick="redirectToPage3()">
@@ -328,9 +365,9 @@
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToDKU6wVVpxDlwvEaUcYLRT1BSnbr7FWnrOg&usqp=CAU">
                     </a>
                     <div class="mt-4">
-                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 class="text-white title-font text-lg font-medium">White Tea</h2>
-                        <p class="text-white mt-1">Rs 200 per packet</p>
+                        <h3 class="text-dark text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                        <h2 class="text-dark title-font text-lg font-medium">White Tea</h2>
+                        <p class="text-dark mt-1">Rs 200 per packet</p>
                     </div>
                 </div>
                 <div class="lg:w-1/4 md:w-1/2 p-4 w-full point" onclick="redirectToPage3()">
@@ -339,9 +376,9 @@
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXd3csbbw4mXC-tUoTsEPCOiEjLWOfF_s-pw&usqp=CAU">
                     </a>
                     <div class="mt-4">
-                        <h3 class="text-white text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 class="text-white title-font text-lg font-medium">Mixed herbs black tea</h2>
-                        <p class="text-white mt-1">Rs 100 per packet</p>
+                        <h3 class="text-dark text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                        <h2 class="text-dark title-font text-lg font-medium">Mixed herbs black tea</h2>
+                        <p class="text-dark mt-1">Rs 100 per packet</p>
                     </div>
                 </div>
                 <div class="lg:w-1/4 md:w-1/2 p-4 w-full point" onclick="redirectToPage3()">
@@ -350,31 +387,20 @@
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx6E94CK8yVircdA3E7APGI2NF559bvvId0w&usqp=CAU">
                     </a>
                     <div class="mt-4">
-                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 class="text-white title-font text-lg font-medium">Red Tea</h2>
-                        <p class="text-white mt-1">Rs 180 per packet</p>
+                        <h3 class="text-dark text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                        <h2 class="text-dark title-font text-lg font-medium">Red Tea</h2>
+                        <p class="text-dark mt-1">Rs 180 per packet</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <section>
-        <div class="review">
-            
-            <p>Reviews (982 votes)</p>
-            <br>
-            <div class="star">
-                <img src="../images/star.png" alt="hj">
-                <img src="../images/star.png" alt="hj">
-                <img src="../images/star.png" alt="hj">
-                <img src="../images/star.png" alt="hj">
-            </div>
-            
-        </div>
-    </section>
 
-    <footer class="text-white body-font">
+
+   
+
+    <footer class="text-dark body-font">
         <div class="des container px-5 py-24 mx-auto">
             <div class="flex flex-wrap md:text-left text-center -mb-10 -mx-4">
                 <div class="lg:w-1/6 md:w-1/2 w-full px-4">
@@ -391,6 +417,8 @@
                 </div>
             </div>
         </div>
+
+          
 
         <div class="border-t border-gray-200">
             <div class="container px-5 py-8 flex flex-wrap mx-auto items-center">
@@ -443,7 +471,7 @@
                 </span>
             </div>
         </div>
-        <div class="green">
+        <div class="bg-green-900">
             <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
                 <p class="text-white text-sm text-center sm:text-left">© Assam4T —
                     <a href="https://twitter.com/knyttneve" class="text-white ml-1" target="_blank"
@@ -472,13 +500,13 @@
         function redirectToPage2() {
             // Get the selected option value
 
-            window.location.href = "/order2.html";
+            window.location.href = "/order.html";
 
         }
         function redirectToPage3() {
             // Get the selected option value
 
-            window.location.href = "/order3.html";
+            window.location.href = "/order.html";
 
         }
     </script>
